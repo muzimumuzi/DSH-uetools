@@ -2,9 +2,9 @@
 
 ### **省流：直接扔给 DSH 让他自己装，然后就能让他控制虚幻编辑器了。**
 
-**TL;DR (English)** — A standalone [DeepSeek Harness](https://github.com/deepseek-ai) plugin that drives a running Unreal Engine editor over its own WebSocket link. No Unreal Box app, no MCP bridge, no external process: the package ships the precompiled **UnrealAgentLink** editor plugin for UE 5.0–5.8, runs the link server itself, and exposes **40 native tools** covering **170** editor commands.
+**TL;DR (English)** — A standalone [DeepSeek Harness](https://github.com/deepseek-ai) plugin that drives a running Unreal Engine editor over its own WebSocket link. It ships the precompiled **UnrealAgentLink** editor plugin for UE 5.0–5.8, runs the link server itself, and exposes **40 native tools** covering **170** editor commands.
 
-用 DSH 直接操作虚幻引擎编辑器：建 Actor、写蓝图、连材质图、跑 PIE、截图回传。**不依赖虚幻盒子**——不需要 `unreal-agent.exe` 运行，也不需要它的 MCP 服务。
+用 DSH 直接操作虚幻引擎编辑器：建 Actor、写蓝图、连材质图、跑 PIE、截图回传。**编辑器插件随包分发**，链路服务器由插件自己跑，不需要任何额外的宿主程序。
 
 ```
 DSH 工具（40 个）
@@ -16,11 +16,14 @@ DSH 工具（40 个）
 
 > 包名 `@dsh-external/dsh-uetools`，工具统一以 `ue_` 开头（`blueprint_*`、`material_*`、`content_import` 除外）。
 
-## 为什么单独做一个插件
+## 它是怎么工作的
 
-虚幻盒子把编辑器链路封在 Electron 应用里：编辑器连它的 `17860`，能力再经它的 MCP 服务（Bearer token）暴露给外部。这条路能走通，但每一步都多一个活的进程和一份要同步的状态——应用没开、端口被占、token 过期，工具就全哑了。
+一条 WebSocket 链路，两头都在明面上：
 
-本仓库把那层拆掉：**编辑器插件随包发**，**链路服务器自己起**，DSH 工具直接说编辑器的协议。运行时只有 DSH 和虚幻编辑器两个进程。
+- **编辑器侧**：随包分发的 UnrealAgentLink 插件（UE 5.0–5.8 预编译）。装进工程后，编辑器启动时主动连出来。
+- **DSH 侧**：本插件监听 `ws://127.0.0.1:17860`，把编辑器的 170 条命令包装成 40 个工具。
+
+没有中间层要托管，也没有 token 要维护。运行时就是 DSH 和虚幻编辑器两个进程；编辑器没开时，工具会直接说清楚缺什么。
 
 ## 安装
 
@@ -152,7 +155,7 @@ ue_status
 - **平台**：随包的编辑器插件二进制只有 **Win64**（UE 5.0–5.8）。macOS/Linux 上 JS 能跑，但没有可装的编辑器插件。
 - **鉴权**：链路是回环 WebSocket，**协议本身没有令牌**。本机任意进程都能连上来冒充编辑器，只在本机可信环境使用；不要把 `host` 改成 `0.0.0.0`。
 - **版本必须匹配**：预编译二进制与引擎版本严格对应，装错版本会让编辑器加载崩溃。
-- **端口唯一**：同一端口只能有一个宿主。和虚幻盒子同时跑必须错开（见上）。
+- **端口唯一**：同一端口只能有一个宿主。若 `17860` 已被别的程序占用，用 `-UALServer=ws://127.0.0.1:<端口>` 让编辑器连别的端口，并把插件 `port` 配成同一个。
 - **未连接不发写操作**：编辑器没连上时工具直接报错，不排队。
 - **撤销栈**：`editor.undo` 撤的是插件自己记录的那几步，不是编辑器的全局历史。
 
@@ -183,4 +186,4 @@ node scripts/extract-methods.mjs                               # 从插件源码
 ## 许可
 
 - 本仓库代码：BSD-3-Clause，见 [`LICENSE`](LICENSE)。
-- 随包的 UnrealAgentLink 编辑器插件与接口文档：Apache-2.0，来自 [ueboxai/uebox](https://github.com/ueboxai/uebox)，全文见 [`licenses/Apache-2.0.txt`](licenses/Apache-2.0.txt) 与 [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md)。
+- 随包的 UnrealAgentLink 编辑器插件与接口文档：Apache-2.0，来源与许可全文见 [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md) 与 [`licenses/Apache-2.0.txt`](licenses/Apache-2.0.txt)。
