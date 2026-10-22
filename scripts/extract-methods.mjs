@@ -1,10 +1,10 @@
 // Regenerate assets/methods.json from the UnrealAgentLink C++ command registry.
-// Dev-only: run after syncing plugin/UnrealAgentLink from the uebox repository.
+// Dev-only: run after syncing plugin/UnrealAgentLink from the upstream plugin source.
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const SOURCE_ROOT = process.env.UAL_PLUGIN_SOURCE
-  ?? 'D:/clone/uebox/plugin/UnrealAgentLink/Source/UnrealAgentLink'
+  ?? 'D:/clone/unreal-agent-link/plugin/UnrealAgentLink/Source/UnrealAgentLink'
 
 const found = new Map()
 

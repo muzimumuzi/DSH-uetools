@@ -124,7 +124,7 @@ export class EditorServer {
   /**
    * Bind the editor endpoint.
    *
-   * @throws when the port is taken (typically by Unreal Box itself).
+   * @throws when the port is taken by another process.
    */
   async start(): Promise<void> {
     if (this.server !== undefined) return
@@ -140,8 +140,8 @@ export class EditorServer {
         server.removeListener('listening', onListening)
         if (error.code === 'EADDRINUSE') {
           reject(new Error(
-            `端口 ${String(this.options.port)} 已被占用（多半是虚幻盒子正在运行）。`
-            + '二选一：关掉盒子，或者用 -UALServer=ws://127.0.0.1:<另一个端口> 启动编辑器，并把本插件 port 配成同一个。',
+            `端口 ${String(this.options.port)} 已被占用。`
+            + '二选一：关掉占用它的程序，或者用 -UALServer=ws://127.0.0.1:<另一个端口> 启动编辑器，并把本插件 port 配成同一个。',
           ))
           return
         }

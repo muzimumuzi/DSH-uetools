@@ -1,7 +1,7 @@
 /**
- * High-level editor tools: the ergonomic wrappers that used to live only in the
- * Unreal Box agent. Each one maps a model-facing schema onto one plugin command
- * and keeps the command names out of the model's way.
+ * High-level editor tools: ergonomic wrappers over the editor's command surface.
+ * Each one maps a model-facing schema onto one plugin command and keeps the
+ * command names out of the model's way.
  *
  * Wrappers stay thin on purpose: the editor plugin owns validation and the
  * authoritative result, so these add schemas, defaults, and readable output —
