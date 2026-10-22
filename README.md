@@ -22,6 +22,16 @@ DSH 工具（40 个）
 
 ### 1. 装进 DSH
 
+仓库不提交构建产物，先编译并打包：
+
+```sh
+cd D:/dsh-uetools
+DSH_CHECKOUT=/path/to/deepseek-harness bash scripts/build.sh   # 编译 lib/
+npm pack                                                       # 产出 dsh-external-dsh-unreal-0.1.0.tgz
+```
+
+然后装进 profile：
+
 ```sh
 cd ~/.dsh/profiles/web
 pnpm add "D:/dsh-uetools/dsh-external-dsh-unreal-0.1.0.tgz"
