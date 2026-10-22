@@ -48,7 +48,7 @@ pnpm add "D:/dsh-uetools/dsh-external-dsh-uetools-0.1.0.tgz"
 "bundles": ["@deepseek-ai/dsh-base", "@deepseek-ai/dsh-web-app", "@dsh-external/dsh-uetools"]
 ```
 
-重启 DSH。包自带 `cordis.patch.yml`，装配时插入一条 `id: unreal` 的条目并带上默认配置。
+重启 DSH。包自带 `cordis.patch.yml`，装配时插入一条 `id: uetools` 的条目并带上默认配置。
 
 ### 2. 装进虚幻工程
 
@@ -117,7 +117,7 @@ ue_status
 `cordis.patch.yml`（可被 profile patch 覆盖）：
 
 ```yaml
-- id: unreal
+- id: uetools
   name: '@dsh-external/dsh-uetools'
   config:
     host: 127.0.0.1        # 监听网卡
