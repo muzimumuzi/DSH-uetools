@@ -28,5 +28,3 @@ None. The plugin's JavaScript imports only Node.js built-in modules
 ## What this package does not include
 
 - Unreal Engine itself.
-- The Unreal Box desktop application (`unreal-agent`); this package never runs it
-  and does not require it.
