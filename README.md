@@ -1,5 +1,7 @@
 # DSH-uetools
 
+省流：直接扔给dsh让他自己装，然后就能让他控制虚幻编辑器了。
+
 **TL;DR (English)** — A standalone [DeepSeek Harness](https://github.com/deepseek-ai) plugin that drives a running Unreal Engine editor over its own WebSocket link. No Unreal Box app, no MCP bridge, no external process: the package ships the precompiled **UnrealAgentLink** editor plugin for UE 5.0–5.8, runs the link server itself, and exposes **40 native tools** covering **170** editor commands.
 
 用 DSH 直接操作虚幻引擎编辑器：建 Actor、写蓝图、连材质图、跑 PIE、截图回传。**不依赖虚幻盒子**——不需要 `unreal-agent.exe` 运行，也不需要它的 MCP 服务。
