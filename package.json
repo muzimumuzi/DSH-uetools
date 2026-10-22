@@ -1,5 +1,5 @@
 {
-  "name": "@dsh-external/dsh-unreal",
+  "name": "@dsh-external/dsh-uetools",
   "version": "0.1.0",
   "description": "独立驱动虚幻引擎的 DSH 插件：自带 UnrealAgentLink 编辑器插件（UE 5.0–5.8 预编译包），不经虚幻盒子直接和编辑器说话",
   "type": "module",

@@ -1,4 +1,4 @@
-# dsh-unreal
+# DSH-uetools
 
 **TL;DR (English)** — A standalone [DeepSeek Harness](https://github.com/deepseek-ai) plugin that drives a running Unreal Engine editor over its own WebSocket link. No Unreal Box app, no MCP bridge, no external process: the package ships the precompiled **UnrealAgentLink** editor plugin for UE 5.0–5.8, runs the link server itself, and exposes **40 native tools** covering **170** editor commands.
 
@@ -6,11 +6,13 @@
 
 ```
 DSH 工具（40 个）
-   └── dsh-unreal 插件（本仓库，Node 内置模块，零依赖）
+   └── DSH-uetools 插件（本仓库，Node 内置模块，零依赖）
          └── WebSocket 服务 ws://127.0.0.1:17860   ← 本插件自己监听
                └── UnrealAgentLink（随包分发的 UE 编辑器插件，5.0–5.8 预编译）
                      └── 虚幻编辑器
 ```
+
+> 包名 `@dsh-external/dsh-uetools`，工具统一以 `ue_` 开头（`blueprint_*`、`material_*`、`content_import` 除外）。
 
 ## 为什么单独做一个插件
 
@@ -28,20 +30,20 @@ DSH 工具（40 个）
 git clone https://github.com/muzimumuzi/DSH-uetools.git
 cd DSH-uetools
 DSH_CHECKOUT=/path/to/deepseek-harness bash scripts/build.sh   # 编译 lib/
-npm pack                                                       # 产出 dsh-external-dsh-unreal-0.1.0.tgz
+npm pack                                                       # 产出 dsh-external-dsh-uetools-0.1.0.tgz
 ```
 
 然后装进 profile：
 
 ```sh
 cd ~/.dsh/profiles/web
-pnpm add "D:/dsh-uetools/dsh-external-dsh-unreal-0.1.0.tgz"
+pnpm add "D:/dsh-uetools/dsh-external-dsh-uetools-0.1.0.tgz"
 ```
 
 在 profile 的 `package.json` 里把包名加进 `dsh.profile.bundles`：
 
 ```json
-"bundles": ["@deepseek-ai/dsh-base", "@deepseek-ai/dsh-web-app", "@dsh-external/dsh-unreal"]
+"bundles": ["@deepseek-ai/dsh-base", "@deepseek-ai/dsh-web-app", "@dsh-external/dsh-uetools"]
 ```
 
 重启 DSH。包自带 `cordis.patch.yml`，装配时插入一条 `id: unreal` 的条目并带上默认配置。
@@ -114,7 +116,7 @@ ue_status
 
 ```yaml
 - id: unreal
-  name: '@dsh-external/dsh-unreal'
+  name: '@dsh-external/dsh-uetools'
   config:
     host: 127.0.0.1        # 监听网卡
     port: 17860            # 编辑器连的端口

@@ -1,8 +1,8 @@
-# dsh-unreal bundle layer: one loader row that mounts the Unreal editor bridge.
+# DSH-uetools bundle layer: one loader row that mounts the Unreal editor bridge.
 # Consumers install the package and add its name to dsh.profile.bundles.
 - insert:
-    - id: unreal
-      name: '@dsh-external/dsh-unreal'
+    - id: uetools
+      name: '@dsh-external/dsh-uetools'
       config:
         host: 127.0.0.1
         port: 17860
