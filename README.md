@@ -25,7 +25,8 @@ DSH 工具（40 个）
 仓库不提交构建产物，先编译并打包：
 
 ```sh
-cd D:/dsh-uetools
+git clone https://github.com/muzimumuzi/DSH-uetools.git
+cd DSH-uetools
 DSH_CHECKOUT=/path/to/deepseek-harness bash scripts/build.sh   # 编译 lib/
 npm pack                                                       # 产出 dsh-external-dsh-unreal-0.1.0.tgz
 ```
