@@ -1,0 +1,51 @@
+{
+  "name": "@dsh-external/dsh-unreal",
+  "version": "0.1.0",
+  "description": "独立驱动虚幻引擎的 DSH 插件：自带 UnrealAgentLink 编辑器插件（UE 5.0–5.8 预编译包），不经虚幻盒子直接和编辑器说话",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "licenses",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "THIRD-PARTY-NOTICES.md"
+  ],
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "unreal",
+    "unreal-engine",
+    "ue5",
+    "unreal-agent-link"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node scripts/protocol-test.mjs"
+  },
+  "engines": {
+    "node": ">=22.19"
+  }
+}

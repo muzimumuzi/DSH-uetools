@@ -1,0 +1,682 @@
+[
+  {
+    "method": "actor.destroy",
+    "file": "UAL_ActorCommands.cpp"
+  },
+  {
+    "method": "actor.get",
+    "file": "UAL_ActorCommands.cpp"
+  },
+  {
+    "method": "actor.get_info",
+    "file": "UAL_ActorCommands.cpp"
+  },
+  {
+    "method": "actor.inspect",
+    "file": "UAL_ActorCommands.cpp"
+  },
+  {
+    "method": "actor.set_property",
+    "file": "UAL_ActorCommands.cpp"
+  },
+  {
+    "method": "actor.set_transform",
+    "file": "UAL_ActorCommands.cpp"
+  },
+  {
+    "method": "actor.spawn",
+    "file": "UAL_ActorCommands.cpp"
+  },
+  {
+    "method": "blueprint.add_component",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.add_variable",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.compile",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.compile_all",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.component_event",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.create",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.create_event_graph",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.create_function",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.create_graph",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.delete_node",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.describe",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.disconnect_pins",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.event_dispatcher",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.export_t3d",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.find_in_blueprints",
+    "file": "UAL_BlueprintSearchCommands.cpp"
+  },
+  {
+    "method": "blueprint.function_signature",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.get_graph",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.import_t3d",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.list_graphs",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.remove_variable",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.search_nodes",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.set_comment",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.set_node_positions",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.set_parent_class",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.set_property",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "blueprint.set_variable_meta",
+    "file": "UAL_BlueprintCommands.cpp"
+  },
+  {
+    "method": "cmd.run_python",
+    "file": "UAL_SystemCommands.cpp"
+  },
+  {
+    "method": "content.asset_ranking",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.audit_optimization",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.batch_move",
+    "file": "UAL_ContentOrganizeCommands.cpp"
+  },
+  {
+    "method": "content.delete",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.dependencies",
+    "file": "UAL_ContentOrganizeCommands.cpp"
+  },
+  {
+    "method": "content.describe",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.fixup_redirectors",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.import",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.migrate",
+    "file": "UAL_ContentOrganizeCommands.cpp"
+  },
+  {
+    "method": "content.move",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.naming_audit",
+    "file": "UAL_ContentOrganizeCommands.cpp"
+  },
+  {
+    "method": "content.normalized_import",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.registry_scan",
+    "file": "UAL_ContentSafetyCommands.cpp"
+  },
+  {
+    "method": "content.registry_status",
+    "file": "UAL_ContentSafetyCommands.cpp"
+  },
+  {
+    "method": "content.search",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "content.set_asset_properties",
+    "file": "UAL_AssetPropertyCommands.cpp"
+  },
+  {
+    "method": "content.size_map",
+    "file": "UAL_ContentBrowserCommands.cpp"
+  },
+  {
+    "method": "cpp.add_class",
+    "file": "UAL_CppCommands.cpp"
+  },
+  {
+    "method": "cpp.compile",
+    "file": "UAL_CppCommands.cpp"
+  },
+  {
+    "method": "cpp.list_modules",
+    "file": "UAL_CppCommands.cpp"
+  },
+  {
+    "method": "cpp.probe",
+    "file": "UAL_CppCommands.cpp"
+  },
+  {
+    "method": "datatable.describe",
+    "file": "UAL_DataTableCommands.cpp"
+  },
+  {
+    "method": "datatable.edit",
+    "file": "UAL_DataTableCommands.cpp"
+  },
+  {
+    "method": "editor.capture_app_window",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.collect_garbage",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.get_dirty",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.get_focus_context",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.get_project_info",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.quit",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.redo",
+    "file": "UAL_UndoCommands.cpp"
+  },
+  {
+    "method": "editor.restart",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.save",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.screenshot",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "editor.undo",
+    "file": "UAL_UndoCommands.cpp"
+  },
+  {
+    "method": "editor.undo_history",
+    "file": "UAL_UndoCommands.cpp"
+  },
+  {
+    "method": "input.add_mapping",
+    "file": "UAL_InputCommands.cpp"
+  },
+  {
+    "method": "input.inject_action",
+    "file": "UAL_InputCommands.cpp"
+  },
+  {
+    "method": "input.inject_key",
+    "file": "UAL_InputCommands.cpp"
+  },
+  {
+    "method": "input.map",
+    "file": "UAL_InputCommands.cpp"
+  },
+  {
+    "method": "landscape.create",
+    "file": "UAL_LandscapeCommands.cpp"
+  },
+  {
+    "method": "landscape.list",
+    "file": "UAL_LandscapeCommands.cpp"
+  },
+  {
+    "method": "landscape.setup_rvt",
+    "file": "UAL_LandscapeCommands.cpp"
+  },
+  {
+    "method": "level.get_current",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "level.light_census",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "level.list",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "level.new",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "level.open",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "level.organize_actors",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "level.query_assets",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "level.save",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "level.set_streaming",
+    "file": "UAL_LevelCommands.cpp"
+  },
+  {
+    "method": "locks.set",
+    "file": "UAL_AssetLockState.cpp"
+  },
+  {
+    "method": "material.add_node",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.apply",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.compile",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.connect_pins",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.create",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.create_function",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.create_instance",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.delete_node",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.delete_unused_nodes",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.describe",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.disconnect_pins",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.duplicate",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.get_graph",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.get_referencers",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.parameter_collection",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.search_nodes",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.set_node_positions",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.set_node_value",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.set_param",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "material.set_property",
+    "file": "UAL_MaterialCommands.cpp"
+  },
+  {
+    "method": "mesh.describe",
+    "file": "UAL_MeshCommands.cpp"
+  },
+  {
+    "method": "mesh.optimize",
+    "file": "UAL_MeshCommands.cpp"
+  },
+  {
+    "method": "messagelog.get",
+    "file": "UAL_MessageLogCommands.cpp"
+  },
+  {
+    "method": "messagelog.list",
+    "file": "UAL_MessageLogCommands.cpp"
+  },
+  {
+    "method": "pcg.add_node",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.apply_graph",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.connect_pins",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.create_graph",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.describe_node",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.diagnose",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.disconnect_pins",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.execute",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.get_graph",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.get_node_schema",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.graph_parameters",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.list_node_types",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.remove_node",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.scene_report",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.set_node_positions",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.spawn_volume",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.status",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pcg.update_node",
+    "file": "UAL_PCGCommands.cpp"
+  },
+  {
+    "method": "pie.click_widget",
+    "file": "UAL_PieBotCommands.cpp"
+  },
+  {
+    "method": "pie.move_stop",
+    "file": "UAL_PieBotCommands.cpp"
+  },
+  {
+    "method": "pie.move_to",
+    "file": "UAL_PieBotCommands.cpp"
+  },
+  {
+    "method": "pie.nav_path",
+    "file": "UAL_PieBotCommands.cpp"
+  },
+  {
+    "method": "pie.observe",
+    "file": "UAL_PieBotCommands.cpp"
+  },
+  {
+    "method": "pie.plan_path",
+    "file": "UAL_PieBotCommands.cpp"
+  },
+  {
+    "method": "pie.run",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "pie.scene",
+    "file": "UAL_PieBotCommands.cpp"
+  },
+  {
+    "method": "pie.set_view",
+    "file": "UAL_PieBotCommands.cpp"
+  },
+  {
+    "method": "pie.stop",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "project.analyze_uproject",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "project.apply_asset_guidelines",
+    "file": "UAL_AssetGuidelineCommands.cpp"
+  },
+  {
+    "method": "project.check_asset_guidelines",
+    "file": "UAL_AssetGuidelineCommands.cpp"
+  },
+  {
+    "method": "project.get_config",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "project.info",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "project.set_config",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "sequence.audit",
+    "file": "UAL_SequencerCommands.cpp"
+  },
+  {
+    "method": "sequence.camera_cuts",
+    "file": "UAL_SequencerCommands.cpp"
+  },
+  {
+    "method": "sequence.camera_keys",
+    "file": "UAL_SequencerCommands.cpp"
+  },
+  {
+    "method": "sequence.describe",
+    "file": "UAL_SequencerCommands.cpp"
+  },
+  {
+    "method": "sequence.rebind",
+    "file": "UAL_SequencerCommands.cpp"
+  },
+  {
+    "method": "sequence.render",
+    "file": "UAL_RenderCommands.cpp"
+  },
+  {
+    "method": "sequence.render_cancel",
+    "file": "UAL_RenderCommands.cpp"
+  },
+  {
+    "method": "sequence.render_status",
+    "file": "UAL_RenderCommands.cpp"
+  },
+  {
+    "method": "system.capture_insights_trace",
+    "file": "UAL_SystemCommands.cpp"
+  },
+  {
+    "method": "system.capture_perf_trace",
+    "file": "UAL_SystemCommands.cpp"
+  },
+  {
+    "method": "system.get_editor_health",
+    "file": "UAL_SystemCommands.cpp"
+  },
+  {
+    "method": "system.get_performance_stats",
+    "file": "UAL_SystemCommands.cpp"
+  },
+  {
+    "method": "system.get_project_info",
+    "file": "UAL_SystemCommands.cpp"
+  },
+  {
+    "method": "system.manage_plugin",
+    "file": "UAL_SystemCommands.cpp"
+  },
+  {
+    "method": "system.run_console_command",
+    "file": "UAL_SystemCommands.cpp"
+  },
+  {
+    "method": "viewport.focus",
+    "file": "UAL_EditorCommands.cpp"
+  },
+  {
+    "method": "widget.add_child",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.create",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.get_hierarchy",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.make_variable",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.preview",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.remove",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.replace",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.set_canvas_slot",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.set_property",
+    "file": "UAL_WidgetCommands.cpp"
+  },
+  {
+    "method": "widget.set_vertical_slot",
+    "file": "UAL_WidgetCommands.cpp"
+  }
+]

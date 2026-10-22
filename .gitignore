@@ -1,0 +1,10 @@
+# build output
+/lib/
+node_modules/
+*.tgz
+*.log
+
+# local scratch
+tmp/
+.DS_Store
+Thumbs.db
